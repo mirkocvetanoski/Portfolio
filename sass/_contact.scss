@@ -10,7 +10,7 @@
   &__profiles {
     position: fixed;
     bottom: 16rem;
-    left: calc((10vw - 8.1rem) / 2);
+    left: 4.5rem;
 
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@
       background-color: $color-primary-light-7;
       position: fixed;
       bottom: -2rem;
-      left: calc((10vw - 8.1rem) / 2 + 2.2rem);
+      left: calc(4.5rem + 44px / 2);
       pointer-events: none;
       display: block;
     }
@@ -44,7 +44,7 @@
   &__mail {
     position: fixed;
     bottom: 16rem;
-    right: calc((10vw - 8.1rem) / 2 + 1.2rem);
+    right: 4.5rem;
     writing-mode: vertical-lr;
     transition: $transition;
 
@@ -60,7 +60,7 @@
       background-color: $color-primary-light-7;
       position: fixed;
       bottom: -2rem;
-      right: calc((10vw - 8.1rem) / 2 + 1.8rem);
+      right: calc(4.5rem + 38px / 2 - 1.2rem);
       pointer-events: none;
       display: block;
     }

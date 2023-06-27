@@ -78,7 +78,7 @@ main {
 .contact__profiles {
   position: fixed;
   bottom: 16rem;
-  left: calc((10vw - 8.1rem) / 2);
+  left: 4.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.2rem; }
@@ -97,14 +97,14 @@ main {
     background-color: #61a5c2;
     position: fixed;
     bottom: -2rem;
-    left: calc((10vw - 8.1rem) / 2 + 2.2rem);
+    left: calc(4.5rem + 44px / 2);
     pointer-events: none;
     display: block; }
 
 .contact__mail {
   position: fixed;
   bottom: 16rem;
-  right: calc((10vw - 8.1rem) / 2 + 1.2rem);
+  right: 4.5rem;
   writing-mode: vertical-lr;
   transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1); }
   .contact__mail:hover {
@@ -117,7 +117,7 @@ main {
     background-color: #61a5c2;
     position: fixed;
     bottom: -2rem;
-    right: calc((10vw - 8.1rem) / 2 + 1.8rem);
+    right: calc(4.5rem + 38px / 2 - 1.2rem);
     pointer-events: none;
     display: block; }
   .contact__mail:hover::before {
@@ -127,7 +127,6 @@ main {
 .header {
   height: 100vh;
   width: 100vw;
-  padding-top: 0.4rem;
   display: grid;
   grid-template-rows: 12rem 1fr;
   grid-template-columns: min-content 1fr;
@@ -150,7 +149,7 @@ main {
     .header__nav--item {
       padding: 0.5rem 1.2rem; }
       .header__nav--item:last-of-type {
-        margin-right: calc((10vw - 8.1rem) / 2 + 2.2rem); }
+        margin-right: 5rem; }
       .header__nav--item a:link,
       .header__nav--item a:visited {
         text-decoration: none;
@@ -193,8 +192,8 @@ main {
   width: 200px;
   height: 200px;
   position: relative;
-  margin: 0 auto;
-  transform: scale(0.75); }
+  margin: 0;
+  transform: scale(0.8); }
 
 .brand:before {
   background-size: 100% 100%;

@@ -1,7 +1,6 @@
 .header {
   height: 100vh;
   width: 100vw;
-  padding-top: 0.4rem;
 
   display: grid;
   grid-template-rows: 12rem 1fr;
@@ -31,7 +30,7 @@
       padding: 0.5rem 1.2rem;
 
       &:last-of-type {
-        margin-right: calc((10vw - 8.1rem) / 2 + 2.2rem);
+        margin-right: 5rem;
       }
 
       & a:link,
@@ -89,13 +88,12 @@
 }
 
 // LOGO ANIMATION
-
 .brand {
   width: 200px;
   height: 200px;
   position: relative;
-  margin: 0 auto;
-  transform: scale(0.75);
+  margin: 0;
+  transform: scale(0.8);
 }
 
 .brand:before {
