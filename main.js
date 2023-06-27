@@ -1,9 +1,3 @@
-// Demo reload page
-const logo = document.querySelector(".header__logo--text");
-logo.addEventListener("click", (e) => {
-  window.location.reload();
-});
-
 // Otherwork divs links fixing
 const otherworkProjectDivs = document.querySelectorAll(".otherwork__project");
 const svgIcon = document.querySelectorAll(".otherwork__project--icons");
@@ -43,3 +37,24 @@ showMoreBtn.addEventListener("click", (e) => {
     showMoreBtn.textContent = "Show More";
   }
 });
+
+// Navbar
+const navbar = document.querySelector(".header__nav_wrapper");
+var scrollableElement = document.body; //document.getElementById('scrollableElement');
+
+scrollableElement.addEventListener("wheel", checkScrollDirection);
+
+function checkScrollDirection(event) {
+  if (checkScrollDirectionIsUp(event)) {
+    console.log("UP");
+  } else {
+    console.log("Down");
+  }
+}
+
+function checkScrollDirectionIsUp(event) {
+  if (event.wheelDelta) {
+    return event.wheelDelta > 0;
+  }
+  return event.deltaY < 0;
+}
