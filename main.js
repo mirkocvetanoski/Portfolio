@@ -39,16 +39,17 @@ showMoreBtn.addEventListener("click", (e) => {
 });
 
 // Navbar
+const header = document.querySelector(".header");
 const navbar = document.querySelector(".header__nav_wrapper");
 var scrollableElement = document.body; //document.getElementById('scrollableElement');
 
 scrollableElement.addEventListener("wheel", checkScrollDirection);
 
 function checkScrollDirection(event) {
-  if (checkScrollDirectionIsUp(event)) {
-    console.log("UP");
+  if (checkScrollDirectionIsUp(event) && window.scrollY > header.clientHeight) {
+    navbar.classList.add("sticky");
   } else {
-    console.log("Down");
+    navbar.classList.remove("sticky");
   }
 }
 
@@ -58,3 +59,39 @@ function checkScrollDirectionIsUp(event) {
   }
   return event.deltaY < 0;
 }
+
+scrollableElement.addEventListener("keydown", function (e) {
+  if (e.keyCode == 38) {
+    // up arrow
+    if (window.scrollY > header.clientHeight) {
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+});
+
+scrollableElement.addEventListener("keydown", function (e) {
+  if (e.keyCode == 40) {
+    // down arrow
+    navbar.classList.remove("sticky");
+  }
+});
+
+var lastScrollTop = 0;
+
+// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+window.addEventListener(
+  "scroll",
+  function () {
+    // or window.addEventListener("scroll"....
+    var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    if (st > lastScrollTop || st < header.clientHeight) {
+      navbar.classList.remove("sticky");
+    } else if (st < lastScrollTop) {
+      navbar.classList.add("sticky");
+    } // else was horizontal scroll
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+  },
+  false
+);

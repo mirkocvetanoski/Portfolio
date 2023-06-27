@@ -8,11 +8,13 @@
   grid-template-columns: min-content 1fr;
   align-items: center;
 
-  .header__nav_wrapper {
+  &__nav_wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100vw;
+    transition: $transition;
+    height: 12rem !important;
   }
 
   &__nav {
@@ -29,7 +31,7 @@
       padding: 0.5rem 1.2rem;
 
       &:last-of-type {
-        margin-right: calc((10vw - 8.1rem) / 2);
+        margin-right: calc((10vw - 8.1rem) / 2 + 2.2rem);
       }
 
       & a:link,
@@ -93,7 +95,9 @@
   height: 200px;
   position: relative;
   margin: 0 auto;
+  transform: scale(0.75);
 }
+
 .brand:before {
   background-size: 100% 100%;
   content: "MC";
@@ -193,4 +197,14 @@ svg path {
   to {
     transform: rotate(0deg);
   }
+}
+
+// STIKCY NAVBAR
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: rgba($color-primary-light-1, 0.9);
+  box-shadow: $shadow;
+  height: 12rem !important;
 }
