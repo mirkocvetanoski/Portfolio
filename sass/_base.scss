@@ -1,0 +1,51 @@
+// COLOR VARIABLES
+$color-primary: #012a4a;
+$color-primary-light-1: #013a63;
+$color-primary-light-2: #01497c;
+$color-primary-light-3: #014f86;
+$color-primary-light-4: #2a6f97;
+$color-primary-light-5: #2c7da0;
+$color-primary-light-6: #468faf;
+$color-primary-light-7: #61a5c2;
+$color-primary-light-8: #89c2d9;
+$color-primary-light-9: #a9d6e5;
+
+// FONT VARIABLES
+$font-primary: "Raleway", sans-serif;
+
+// TRANSITION
+$transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+
+// SHADOW
+$shadow: 1px 0px 19px -4px rgba(0, 0, 0, 0.3);
+
+*,
+*::before,
+**::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $color-primary;
+  color: $color-primary-light-7;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+}

@@ -1,0 +1,107 @@
+.header {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  grid-template-rows: 8rem 1fr;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 10vw;
+
+    &--text {
+      display: inline-block;
+      padding: 0.8rem;
+      font-size: 3.2rem;
+      font-weight: 700;
+      font-style: italic;
+      border-radius: 5px;
+      color: currentColor;
+      box-shadow: 1px 1px 4px $color-primary-light-7;
+      cursor: pointer;
+      transition: $transition;
+    }
+
+    &--text:hover {
+      color: $color-primary-light-9;
+      box-shadow: 1px 1px 4px $color-primary-light-9;
+      transform: scale(1.02);
+    }
+  }
+
+  &__nav {
+    height: 100%;
+    list-style: none;
+    font-size: 1.6rem;
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.8rem;
+
+    &--item {
+      padding: 0.5rem 1.2rem;
+
+      &:last-of-type {
+        margin-right: calc((10vw - 8.1rem) / 2);
+      }
+
+      & a:link,
+      & a:visited {
+        text-decoration: none;
+        display: inline-block;
+        color: $color-primary-light-7;
+        font-weight: 700;
+        cursor: pointer;
+        transition: $transition;
+      }
+
+      &:last-child a {
+        color: $color-primary-light-9;
+        background-color: rgba($color-primary-light-9, 0);
+        border: 1px solid $color-primary-light-9;
+        border-radius: 5px;
+        padding: 1.2rem;
+        transition: $transition;
+      }
+
+      &:not(:last-child) a:hover {
+        color: $color-primary-light-9;
+        transform: translateY(-1px);
+      }
+
+      &:last-child a:hover {
+        background-color: rgba($color-primary-light-9, 0.15);
+      }
+    }
+  }
+
+  &__intro {
+    grid-column: 1 / 3;
+    justify-self: center;
+    width: 50vw;
+
+    &--text {
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: $color-primary-light-9;
+      filter: brightness(90%);
+      letter-spacing: 2px;
+    }
+
+    &--longtext {
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: $color-primary-light-9;
+      line-height: 1.2;
+      filter: brightness(80%);
+      letter-spacing: 1.6px;
+    }
+  }
+}

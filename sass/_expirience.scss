@@ -1,0 +1,20 @@
+.expirience {
+  width: 38vw;
+  margin-bottom: 10rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  &__intro {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    font: 300;
+    color: $color-primary-light-9;
+    line-height: 1.2;
+    filter: brightness(80%);
+    letter-spacing: 1.6px;
+    align-self: center;
+    grid-column: 1 / -1;
+  }
+}
