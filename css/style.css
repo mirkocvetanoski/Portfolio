@@ -128,7 +128,7 @@ main {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 12rem 1fr;
+  grid-template-rows: 8rem 1fr;
   grid-template-columns: min-content 1fr;
   align-items: center; }
   .header__nav_wrapper {
@@ -137,7 +137,7 @@ main {
     justify-content: space-between;
     width: 100vw;
     transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
-    height: 12rem !important; }
+    height: 8rem !important; }
   .header__nav {
     list-style: none;
     font-size: 1.6rem;
@@ -193,14 +193,14 @@ main {
   height: 200px;
   position: relative;
   margin: 0;
-  transform: scale(0.8); }
+  transform: scale(0.6); }
 
 .brand:before {
   background-size: 100% 100%;
   content: "MC";
   line-height: 205px;
   color: #a9d6e5;
-  font-size: 2.4rem;
+  font-size: 3.6rem;
   font-family: "HEAVITAS", "Helvetica Rounded", Arial, sans-serif;
   font-weight: bold;
   text-align: center;
@@ -281,7 +281,7 @@ svg path {
   z-index: 10;
   background-color: rgba(1, 58, 99, 0.9);
   box-shadow: 1px 0px 19px -4px rgba(0, 0, 0, 0.3);
-  height: 12rem !important; }
+  height: 8rem !important; }
 
 .getintouch {
   width: 30vw;
