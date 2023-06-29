@@ -94,6 +94,10 @@
   position: relative;
   margin: 0;
   transform: scale(0.6);
+
+  @media only screen and (max-width: $bp-largest) {
+    transform: scale(0.5);
+  }
 }
 
 .brand:before {

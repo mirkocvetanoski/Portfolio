@@ -19,6 +19,11 @@ $transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
 // SHADOW
 $shadow: 1px 0px 19px -4px rgba(0, 0, 0, 0.3);
 
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 1000px
+
 *,
 *::before,
 **::after {
@@ -32,6 +37,10 @@ html {
   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -49,5 +58,3 @@ main {
   grid-template-rows: auto;
   justify-items: center;
 }
-
-

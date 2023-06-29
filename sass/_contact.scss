@@ -38,6 +38,10 @@
       left: calc(4.5rem + 44px / 2);
       pointer-events: none;
       display: block;
+
+      @media only screen and (max-width: $bp-largest) {
+        left: calc(4.5rem + 35.19px / 2);
+      }
     }
   }
 
@@ -60,7 +64,7 @@
       background-color: $color-primary-light-7;
       position: fixed;
       bottom: -2rem;
-      right: calc(4.5rem + 38px / 2 - 1.2rem);
+      right: calc(4.5rem + 30.19px / 2 - 1.2rem);
       pointer-events: none;
       display: block;
     }

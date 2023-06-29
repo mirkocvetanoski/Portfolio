@@ -1,11 +1,19 @@
 .work {
-  width: 54vw;
+  width: 56vw;
   margin-bottom: 10rem;
 
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.2fr repeat(3, 1fr);
   row-gap: 5.2rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    width: 58vw;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 70vw;
+  }
 
   &__project {
     display: flex;
@@ -69,8 +77,8 @@
       display: block;
       position: relative;
       transition: $transition;
-      width: 115%;
-      height: 100%;
+      width: 110%;
+      height: 90%;
       box-shadow: $shadow;
     }
 

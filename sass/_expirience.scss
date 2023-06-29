@@ -1,10 +1,19 @@
 .expirience {
-  width: 38vw;
+  width: 42vw;
   margin-bottom: 10rem;
+  margin-left: 5rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+
+  @media only screen and (max-width: $bp-large) {
+    margin-left: 2rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 70vw;
+  }
 
   &__intro {
     margin-top: 1.5rem;
