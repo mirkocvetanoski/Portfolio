@@ -26,11 +26,12 @@ body {
   margin: 0; }
 
 main {
-  width: 100vw;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  justify-items: center; }
+  justify-items: center;
+  justify-content: center; }
 
 .heading-1 {
   font-size: 6.6rem;
@@ -446,15 +447,12 @@ svg path {
     margin-bottom: 2.8rem; }
 
 .otherwork__projects {
-  width: 65vw;
+  width: 70vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
   column-gap: 2rem;
   row-gap: 2rem;
   margin-bottom: 2rem; }
-  @media only screen and (max-width: 50em) {
-    .otherwork__projects {
-      width: 70vw; } }
   .otherwork__projects--btn:link, .otherwork__projects--btn:visited {
     font-size: 1.6rem;
     text-decoration: none;

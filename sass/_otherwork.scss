@@ -10,16 +10,12 @@
 }
 
 .otherwork__projects {
-  width: 65vw;
+  width: 70vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
   column-gap: 2rem;
   row-gap: 2rem;
   margin-bottom: 2rem;
-
-  @media only screen and (max-width: $bp-medium) {
-    width: 70vw;
-  }
 
   &--btn:link,
   &--btn:visited {
