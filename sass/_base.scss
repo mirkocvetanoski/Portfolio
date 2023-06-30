@@ -22,7 +22,8 @@ $shadow: 1px 0px 19px -4px rgba(0, 0, 0, 0.3);
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
-$bp-medium: 50em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 43.75em; // 700px
 
 *,
 *::before,
@@ -39,6 +40,10 @@ html {
   scroll-behavior: smooth;
 
   @media only screen and (max-width: $bp-largest) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-large) {
     font-size: 50%;
   }
 }
@@ -53,6 +58,7 @@ body {
 }
 
 main {
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;

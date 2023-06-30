@@ -20,6 +20,52 @@
     align-items: center;
     justify-content: space-evenly;
 
+    & > * {
+      @media only screen and (max-width: $bp-medium) {
+        padding: 3.2rem;
+        height: 28rem;
+      }
+    }
+
+    &:nth-of-type(1) {
+      @media only screen and (max-width: $bp-medium) {
+        background-image: linear-gradient(
+            to top right,
+            rgba($color-primary, 0.95),
+            rgba($color-primary, 0.83)
+          ),
+          url("/img/quantitycheck.png");
+        background-size: cover;
+        border-radius: 5px;
+      }
+    }
+
+    &:nth-of-type(2) {
+      @media only screen and (max-width: $bp-medium) {
+        background-image: linear-gradient(
+            to top right,
+            rgba($color-primary, 0.95),
+            rgba($color-primary, 0.83)
+          ),
+          url("/img/educa.png");
+        background-size: cover;
+        border-radius: 5px;
+      }
+    }
+
+    &:nth-of-type(3) {
+      @media only screen and (max-width: $bp-medium) {
+        background-image: linear-gradient(
+            to top right,
+            rgba($color-primary, 0.95),
+            rgba($color-primary, 0.83)
+          ),
+          url("/img/onlineshop.png");
+        background-size: cover;
+        border-radius: 5px;
+      }
+    }
+
     &__details {
       width: 125%;
       z-index: 1;
@@ -29,6 +75,11 @@
       flex-direction: column;
       align-items: flex-end;
       gap: 2rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        align-items: flex-start;
+        justify-content: center;
+      }
 
       &--title {
         font-size: 2.4rem;
@@ -52,6 +103,10 @@
         padding: 2.4rem 3.4rem;
         border-radius: 5px;
         box-shadow: $shadow;
+
+        @media only screen and (max-width: $bp-medium) {
+          text-align: start;
+        }
       }
 
       &--tags {
@@ -70,6 +125,10 @@
         align-items: center;
         justify-content: center;
         gap: 1.6rem;
+
+        @media only screen and (max-width: $bp-medium) {
+          z-index: 2;
+        }
       }
     }
 
@@ -80,6 +139,10 @@
       width: 110%;
       height: 90%;
       box-shadow: $shadow;
+
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+      }
     }
 
     &__img::after {

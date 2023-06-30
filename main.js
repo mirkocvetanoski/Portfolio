@@ -95,3 +95,21 @@ window.addEventListener(
   },
   false
 );
+
+// Work section screensize < 800px
+const workProjectDetailsDivs = document.querySelectorAll(
+  ".work__project__details"
+);
+const workProjectDetailsTitle = document.querySelectorAll(
+  ".work__project__details--title"
+);
+
+if (window.innerWidth < 800) {
+  workProjectDetailsDivs.forEach((div, index) =>
+    div.addEventListener("click", (e) => {
+      if (e.target.tagName !== "svg") {
+        window.open(workProjectDetailsTitle[index]);
+      }
+    })
+  );
+}

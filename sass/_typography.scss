@@ -9,10 +9,14 @@
   @media only screen and (max-width: $bp-large) {
     font-size: 6.2rem;
   }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 5.6rem;
+  }
 }
 
 .heading-2 {
-  font-size: 5.2rem;
+  font-size: 6.6rem;
   font-weight: 300;
   color: $color-primary-light-7;
   filter: drop-shadow(2px 2px 1px $color-primary-light-8);
@@ -21,6 +25,10 @@
 
   @media only screen and (max-width: $bp-large) {
     font-size: 6.2rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 5.6rem;
   }
 }
 

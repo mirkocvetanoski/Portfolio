@@ -17,6 +17,10 @@
   row-gap: 2rem;
   margin-bottom: 2rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    width: 70vw;
+  }
+
   &--btn:link,
   &--btn:visited {
     font-size: 1.6rem;
