@@ -24,7 +24,8 @@ body {
   font-weight: 400;
   line-height: 1;
   margin: 0;
-  position: relative; }
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1); }
   @media only screen and (max-width: 43.75em) {
     body::before {
       content: "";
@@ -34,7 +35,10 @@ body {
       width: 100%;
       height: 100%;
       backdrop-filter: blur(4px);
-      z-index: 2; } }
+      z-index: 2;
+      display: none; } }
+  body.visible::before {
+    display: block; }
 
 main {
   width: 100%;
@@ -171,7 +175,8 @@ main {
     justify-content: space-between;
     width: 100vw;
     transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
-    height: 8rem !important; }
+    height: 8rem !important;
+    position: relative; }
   .header__nav {
     list-style: none;
     font-size: 1.6rem;
@@ -179,7 +184,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 0.8rem; }
+    gap: 0.8rem;
+    transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1); }
     @media only screen and (max-width: 43.75em) {
       .header__nav {
         flex-direction: column;
@@ -192,10 +198,12 @@ main {
         top: 0;
         right: 0;
         font-size: 2.4rem;
-        background-color: #013a63;
+        background-color: rgba(1, 58, 99, 0.9);
         z-index: 2;
         margin: 0;
-        padding: 0; } }
+        padding: 0; }
+        .header__nav.visible {
+          transform: translateX(100%); } }
     .header__nav--item {
       padding: 0.5rem 1.2rem; }
       .header__nav--item:last-of-type {
@@ -742,3 +750,54 @@ svg path {
   .footer a:link:hover,
   .footer a:visited:hover {
     filter: brightness(120%); }
+
+.menu__btn {
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  top: -5rem;
+  right: -1rem;
+  transform: scale(0.5);
+  display: none;
+  z-index: 10; }
+  @media only screen and (max-width: 43.75em) {
+    .menu__btn {
+      display: flex; } }
+  .menu__btn svg {
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1); }
+    .menu__btn svg path {
+      transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1); }
+    .menu__btn svg path:nth-child(1) {
+      transform-origin: 36% 40%;
+      stroke: #a9d6e5; }
+    .menu__btn svg path:nth-child(2) {
+      stroke-dasharray: 29 299;
+      stroke: #a9d6e5; }
+    .menu__btn svg path:nth-child(3) {
+      transform-origin: 35% 63%;
+      stroke: #a9d6e5; }
+    .menu__btn svg path:nth-child(4) {
+      stroke-dasharray: 29 299;
+      stroke: #a9d6e5; }
+    .menu__btn svg path:nth-child(5) {
+      transform-origin: 61% 52%;
+      stroke: #a9d6e5; }
+    .menu__btn svg path:nth-child(6) {
+      transform-origin: 62% 52%;
+      stroke: #a9d6e5; }
+  .menu__btn.active svg {
+    transform: rotate(90deg); }
+    .menu__btn.active svg path:nth-child(1) {
+      transform: translateX(9px) translateY(1px) rotate(45deg); }
+    .menu__btn.active svg path:nth-child(2) {
+      stroke-dasharray: 225 299;
+      stroke-dashoffset: -72px; }
+    .menu__btn.active svg path:nth-child(3) {
+      transform: translateX(9px) translateY(1px) rotate(-45deg); }
+    .menu__btn.active svg path:nth-child(4) {
+      stroke-dasharray: 225 299;
+      stroke-dashoffset: -72px; }
+    .menu__btn.active svg path:nth-child(5) {
+      transform: translateX(9px) translateY(1px) rotate(-45deg); }
+    .menu__btn.active svg path:nth-child(6) {
+      transform: translateX(9px) translateY(1px) rotate(45deg); }

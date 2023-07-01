@@ -56,6 +56,7 @@ body {
   line-height: 1;
   margin: 0;
   position: relative;
+  transition: $transition;
 
   &::before {
     @media only screen and (max-width: $bp-small) {
@@ -67,7 +68,12 @@ body {
       height: 100%;
       backdrop-filter: blur(4px);
       z-index: 2;
+      display: none;
     }
+  }
+
+  &.visible::before {
+    display: block;
   }
 }
 

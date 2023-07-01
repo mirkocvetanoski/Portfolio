@@ -80,6 +80,28 @@ scrollableElement.addEventListener("keydown", function (e) {
 
 var lastScrollTop = 0;
 
+// Menu button for small screen < 700px
+const menuBtn = document.querySelector(".menu__btn");
+const headerNav = document.querySelector(".header__nav");
+const body = document.querySelector("body");
+const headerNavLinks = document.querySelectorAll(".header__nav--link");
+
+menuBtn.addEventListener("click", function (e) {
+  toggleVisible(headerNav, body, menuBtn);
+});
+
+headerNavLinks.forEach((link) =>
+  link.addEventListener("click", (e) => {
+    toggleVisible(headerNav, body, menuBtn);
+  })
+);
+
+const toggleVisible = function (headerNav, body, menuBtn) {
+  headerNav.classList.toggle("visible");
+  body.classList.toggle("visible");
+  menuBtn.classList.toggle("active");
+};
+
 // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
 window.addEventListener(
   "scroll",

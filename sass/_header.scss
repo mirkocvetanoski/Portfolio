@@ -14,6 +14,7 @@
     width: 100vw;
     transition: $transition;
     height: 8rem !important;
+    position: relative;
   }
 
   &__nav {
@@ -25,6 +26,7 @@
     align-items: center;
     justify-content: flex-end;
     gap: 0.8rem;
+    transition: $transition;
 
     @media only screen and (max-width: $bp-small) {
       flex-direction: column;
@@ -37,11 +39,14 @@
       top: 0;
       right: 0;
       font-size: 2.4rem;
-      background-color: $color-primary-light-1;
+      background-color: rgba($color-primary-light-1, 0.9);
       z-index: 2;
       margin: 0;
       padding: 0;
-      // transform: translateX(50vw);
+
+      &.visible {
+        transform: translateX(100%);
+      }
     }
 
     &--item {
