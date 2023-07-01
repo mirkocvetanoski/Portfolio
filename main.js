@@ -96,6 +96,12 @@ headerNavLinks.forEach((link) =>
   })
 );
 
+body.addEventListener("click", (e) => {
+  if (e.target.classList.contains("visible")) {
+    toggleVisible(headerNav, body, menuBtn);
+  }
+});
+
 const toggleVisible = function (headerNav, body, menuBtn) {
   headerNav.classList.toggle("visible");
   body.classList.toggle("visible");
