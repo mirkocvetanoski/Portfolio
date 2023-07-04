@@ -16,6 +16,17 @@
     flex-direction: column;
     gap: 1.2rem;
 
+    @media only screen and (max-width: $bp-medium) {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 6rem;
+      width: 70vw;
+      gap: 2.6rem;
+    }
+
     &--icon svg {
       height: 2rem;
       width: 2rem;
@@ -42,6 +53,10 @@
       @media only screen and (max-width: $bp-largest) {
         left: calc(4.5rem + 35.19px / 2);
       }
+
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+      }
     }
   }
 
@@ -57,6 +72,10 @@
       letter-spacing: 0.3px;
     }
 
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+
     &::before {
       content: "";
       height: 16rem;
@@ -67,6 +86,10 @@
       right: calc(4.5rem + 30.19px / 2 - 1.2rem);
       pointer-events: none;
       display: block;
+
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+      }
     }
 
     &:hover::before {
