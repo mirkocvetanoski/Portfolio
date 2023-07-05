@@ -141,3 +141,10 @@ if (window.innerWidth < 800) {
     })
   );
 }
+
+// Reload the page
+const logo = document.querySelector(".brand");
+
+logo.addEventListener("click", function (e) {
+  window.location.reload();
+});
