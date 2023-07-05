@@ -20,7 +20,7 @@
   }
 
   @media only screen and (max-width: $bp-smallest) {
-    width: 76vw;
+    width: 80vw;
   }
 
   @media only screen and (max-width: $bp-extra-small) {
@@ -99,7 +99,7 @@
         height: fit-content;
       }
 
-      @media only screen and (max-width: $bp-small) {
+      @media only screen and (max-width: $bp-smallest) {
         padding: 4rem 1.6rem;
       }
 
