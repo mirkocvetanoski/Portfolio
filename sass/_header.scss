@@ -138,9 +138,15 @@
   margin: 0;
   margin-left: -2.5rem;
   transform: scale(0.6);
+  transition: $transition;
 
   &:hover {
     cursor: pointer;
+    opacity: 45%;
+
+    .logo svg path {
+      opacity: 45%;
+    }
   }
 
   @media only screen and (max-width: $bp-largest) {
