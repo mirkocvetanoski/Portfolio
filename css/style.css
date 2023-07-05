@@ -97,7 +97,7 @@ main {
 
 .heading-3 {
   display: inline-block;
-  width: max-content;
+  width: fit-content;
   font-size: 3.6rem;
   font-weight: 400;
   color: #61a5c2;
@@ -720,8 +720,7 @@ svg path {
       width: 80vw; } }
   @media only screen and (max-width: 21.875em) {
     .work {
-      width: 90%;
-      justify-items: center;
+      width: 90vw;
       margin-bottom: 2rem; } }
   .work__project {
     display: flex;
