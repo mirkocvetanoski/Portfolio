@@ -95,8 +95,20 @@
     justify-self: center;
     width: 50vw;
 
+    @media only screen and (max-width: $bp-large) {
+      width: 64vw;
+    }
+
     @media only screen and (max-width: $bp-medium) {
       width: 70vw;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 76vw;
+    }
+
+    @media only screen and (max-width: $bp-extra-small) {
+      width: 90%;
     }
 
     &--text {
@@ -124,10 +136,15 @@
   height: 200px;
   position: relative;
   margin: 0;
+  margin-left: -2.5rem;
   transform: scale(0.6);
 
   @media only screen and (max-width: $bp-largest) {
     transform: scale(0.5);
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    left: -4.5rem;
   }
 }
 

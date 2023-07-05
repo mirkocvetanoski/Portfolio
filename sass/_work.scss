@@ -11,8 +11,22 @@
     width: 58vw;
   }
 
+  @media only screen and (max-width: $bp-large) {
+    width: 64vw;
+  }
+
   @media only screen and (max-width: $bp-medium) {
     width: 70vw;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    width: 76vw;
+  }
+
+  @media only screen and (max-width: $bp-extra-small) {
+    width: 90%;
+    justify-items: center;
+    margin-bottom: 2rem;
   }
 
   &__project {
@@ -79,6 +93,18 @@
       @media only screen and (max-width: $bp-medium) {
         align-items: flex-start;
         justify-content: center;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        height: fit-content;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        padding: 4rem 1.6rem;
+      }
+
+      @media only screen and (max-width: $bp-extra-small) {
+        padding: 4rem 1rem;
       }
 
       &--title {

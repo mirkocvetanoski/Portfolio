@@ -16,6 +16,17 @@
   column-gap: 2rem;
   row-gap: 2rem;
   margin-bottom: 2rem;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    width: 76vw;
+  }
+
+  @media only screen and (max-width: $bp-extra-small) {
+    width: 90%;
+  }
 
   &--btn:link,
   &--btn:visited {
@@ -131,9 +142,14 @@
     justify-items: center;
     gap: 1.2rem;
     letter-spacing: 1px;
+    flex-flow: wrap;
   }
 
   &:nth-last-child(-n + 3) {
     display: none;
+  }
+
+  @media only screen and (max-width: $bp-extra-small) {
+    padding: 1rem;
   }
 }

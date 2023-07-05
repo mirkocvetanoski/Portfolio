@@ -8,12 +8,23 @@
   grid-template-rows: auto;
 
   @media only screen and (max-width: $bp-large) {
-    margin-left: 2rem;
+    margin-left: 6rem;
+    width: 64vw;
   }
 
   @media only screen and (max-width: $bp-medium) {
     width: 70vw;
     margin-left: 0;
+    margin-bottom: 8rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    width: 76vw;
+    margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: $bp-extra-small) {
+    width: 90%;
   }
 
   &__intro {

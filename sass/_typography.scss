@@ -13,6 +13,14 @@
   @media only screen and (max-width: $bp-medium) {
     font-size: 5.6rem;
   }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 4.4rem;
+  }
 }
 
 .heading-2 {
@@ -29,6 +37,14 @@
 
   @media only screen and (max-width: $bp-medium) {
     font-size: 5.6rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 4.4rem;
   }
 }
 

@@ -14,6 +14,10 @@
     width: 70vw;
   }
 
+  @media only screen and (max-width: $bp-smallest) {
+    width: 76vw;
+  }
+
   & > * {
     margin: 0;
   }

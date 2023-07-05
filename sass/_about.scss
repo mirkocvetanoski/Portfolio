@@ -18,12 +18,21 @@
   }
 
   @media only screen and (max-width: $bp-large) {
-    margin-left: 2rem;
+    margin-left: 3rem;
+    width: 64vw;
   }
 
   @media only screen and (max-width: $bp-medium) {
     width: 70vw;
     margin-left: 0;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    width: 76vw;
+  }
+
+  @media only screen and (max-width: $bp-extra-small) {
+    width: 90%;
   }
 
   &__intro,
@@ -40,6 +49,20 @@
     @media only screen and (max-width: $bp-small) {
       grid-column: 1 / -1;
     }
+
+    @media only screen and (max-width: $bp-extra-small) {
+      justify-self: flex-start;
+      width: 90%;
+    }
+  }
+
+  &__technologies--text {
+    @media only screen and (max-width: $bp-extra-small) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
   }
 
   &__technologies--list {
@@ -52,6 +75,16 @@
 
     @media only screen and (max-width: $bp-small) {
       grid-column: 1 / -1;
+    }
+
+    @media only screen and (max-width: $bp-extra-small) {
+      padding: 0;
+    }
+
+    &__technologies {
+      @media only screen and (max-width: $bp-extra-small) {
+        justify-self: center;
+      }
     }
 
     & li {
@@ -82,6 +115,10 @@
     @media only screen and (max-width: $bp-small) {
       grid-row: 5 / -1;
       grid-column: 1 / -1;
+    }
+
+    @media only screen and (max-width: $bp-extra-small) {
+      justify-self: center;
     }
   }
 

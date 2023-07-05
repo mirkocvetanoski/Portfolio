@@ -24,7 +24,8 @@ $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px
 $bp-small: 43.75em; // 700px
-$bp-smallest: 31.25em; //500px
+$bp-smallest: 34.375em; //550px
+$bp-extra-small: 21.875em; //350px
 
 html {
   box-sizing: border-box;
@@ -91,4 +92,8 @@ main {
   grid-template-rows: auto;
   justify-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-small) {
+    row-gap: 3.2rem;
+  }
 }

@@ -5,7 +5,7 @@
   align-items: flex-end;
   justify-content: center;
   margin-top: 7rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
 
   & a:link,
   a:visited {
@@ -26,5 +26,10 @@
 
   @media only screen and (max-width: $bp-medium) {
     margin-top: 0rem;
+  }
+
+  @media only screen and (max-width: $bp-extra-small) {
+    width: 80%;
+    text-align: center;
   }
 }
