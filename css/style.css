@@ -624,6 +624,8 @@ svg path {
     background-color: rgba(169, 214, 229, 0.15); }
 
 .otherwork__project {
+  width: 88%;
+  height: 78%;
   font-size: 1.2rem;
   font-weight: 300;
   color: #a9d6e5;
@@ -694,7 +696,8 @@ svg path {
     display: none; }
   @media only screen and (max-width: 21.875em) {
     .otherwork__project {
-      padding: 1rem; } }
+      padding: 1rem;
+      height: 90%; } }
 
 .work {
   width: 56vw;
