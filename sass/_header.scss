@@ -142,7 +142,7 @@
 
   &:hover {
     cursor: pointer;
-    opacity: 45%;
+    filter: hue-rotate(20deg);
 
     .logo svg path {
       opacity: 45%;

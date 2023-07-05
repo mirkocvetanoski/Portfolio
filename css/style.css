@@ -309,7 +309,7 @@ main {
   transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1); }
   .brand:hover {
     cursor: pointer;
-    opacity: 45%; }
+    filter: hue-rotate(20deg); }
     .brand:hover .logo svg path {
       opacity: 45%; }
   @media only screen and (max-width: 75em) {
