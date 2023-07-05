@@ -139,6 +139,10 @@
   margin-left: -2.5rem;
   transform: scale(0.6);
 
+  &:hover {
+    cursor: pointer;
+  }
+
   @media only screen and (max-width: $bp-largest) {
     transform: scale(0.5);
   }
