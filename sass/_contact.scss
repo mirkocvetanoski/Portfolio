@@ -1,0 +1,100 @@
+.contact {
+  &__profiles > *,
+  &__mail > * {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: inherit;
+    padding: 0.5rem 1.2rem;
+  }
+
+  &__profiles {
+    position: fixed;
+    bottom: 16rem;
+    left: 4.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 6rem;
+      width: 70vw;
+      gap: 2.6rem;
+    }
+
+    &--icon svg {
+      height: 2rem;
+      width: 2rem;
+      fill: $color-primary-light-7;
+      transition: $transition;
+    }
+
+    &--icon svg:hover {
+      fill: $color-primary-light-9;
+      transform: translateY(-1px);
+    }
+
+    &::before {
+      content: "";
+      height: 16rem;
+      width: 1px;
+      background-color: $color-primary-light-7;
+      position: fixed;
+      bottom: -2rem;
+      left: calc(4.5rem + 44px / 2);
+      pointer-events: none;
+      display: block;
+
+      @media only screen and (max-width: $bp-largest) {
+        left: calc(4.5rem + 35.19px / 2);
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+      }
+    }
+  }
+
+  &__mail {
+    position: fixed;
+    bottom: 16rem;
+    right: 4.5rem;
+    writing-mode: vertical-lr;
+    transition: $transition;
+
+    &:hover {
+      color: $color-primary-light-9;
+      letter-spacing: 0.3px;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      height: 16rem;
+      width: 1px;
+      background-color: $color-primary-light-7;
+      position: fixed;
+      bottom: -2rem;
+      right: calc(4.5rem + 30.19px / 2 - 1.2rem);
+      pointer-events: none;
+      display: block;
+
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+      }
+    }
+
+    &:hover::before {
+      color: $color-primary-light-7;
+      letter-spacing: 0px;
+    }
+  }
+}

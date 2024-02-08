@@ -1,0 +1,41 @@
+.experience {
+  width: 42vw;
+  margin-bottom: 10rem;
+  margin-left: 5rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  @media only screen and (max-width: $bp-large) {
+    margin-left: 6rem;
+    width: 64vw;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 70vw;
+    margin-left: 0;
+    margin-bottom: 8rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    width: 76vw;
+    margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: $bp-extra-small) {
+    width: 90%;
+  }
+
+  &__intro {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    font: 300;
+    color: $color-primary-light-9;
+    line-height: 1.2;
+    filter: brightness(80%);
+    letter-spacing: 1.6px;
+    align-self: center;
+    grid-column: 1 / -1;
+  }
+}

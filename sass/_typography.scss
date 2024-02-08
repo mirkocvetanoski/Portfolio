@@ -1,0 +1,79 @@
+.heading-1 {
+  font-size: 6.6rem;
+  font-weight: 300;
+  color: $color-primary-light-9;
+  filter: drop-shadow(2px 2px 1px $color-primary-light-9);
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 6.2rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 5.6rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 4.4rem;
+  }
+}
+
+.heading-2 {
+  font-size: 6.6rem;
+  font-weight: 300;
+  color: $color-primary-light-7;
+  filter: drop-shadow(2px 2px 1px $color-primary-light-8);
+  letter-spacing: 3px;
+  margin-top: 0;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 6.2rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 5.6rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 4.4rem;
+  }
+}
+
+.heading-3 {
+  display: inline-block;
+  width: fit-content;
+  font-size: 3.6rem;
+  font-weight: 400;
+  color: $color-primary-light-7;
+  grid-column: 1 / -1;
+  margin-bottom: 1.5rem;
+  align-self: end;
+  position: relative;
+}
+
+.heading-3::after {
+  content: "";
+  width: 15vw;
+  height: 1px;
+  background-color: $color-primary-light-2;
+  position: absolute;
+  top: 1.8rem;
+  left: 100%;
+  margin-left: 2rem;
+}
+
+.underline {
+  color: $color-primary-light-9;
+  text-decoration: underline;
+  font-weight: 700;
+  filter: brightness(100%);
+}

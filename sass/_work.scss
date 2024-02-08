@@ -1,0 +1,266 @@
+.work {
+  width: 56vw;
+  margin-bottom: 10rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr repeat(3, 1fr);
+  row-gap: 5.2rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    width: 58vw;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    width: 64vw;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 70vw;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    width: 80vw;
+  }
+
+  @media only screen and (max-width: $bp-extra-small) {
+    width: 90vw;
+    margin-bottom: 2rem;
+  }
+
+  &__project {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 34rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 36rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      height: 38rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      height: 44rem;
+    }
+
+    @media only screen and (max-width: $bp-extra-small) {
+      height: 48rem;
+    }
+
+    & > * {
+      @media only screen and (max-width: $bp-medium) {
+        padding: 3.2rem;
+        height: 28rem;
+        background-position: center;
+      }
+    }
+
+    &:nth-of-type(1) {
+      @media only screen and (max-width: $bp-medium) {
+        background-image: linear-gradient(
+            to top right,
+            rgba($color-primary, 0.95),
+            rgba($color-primary, 0.83)
+          ),
+          url("/img/thewildoasis.png");
+        background-size: cover;
+        border-radius: 5px;
+      }
+    }
+
+    &:nth-of-type(2) {
+      @media only screen and (max-width: $bp-medium) {
+        background-image: linear-gradient(
+            to top right,
+            rgba($color-primary, 0.95),
+            rgba($color-primary, 0.83)
+          ),
+          url("/img/pizza-app.png");
+        background-size: cover;
+        border-radius: 5px;
+      }
+    }
+
+    &:nth-of-type(3) {
+      @media only screen and (max-width: $bp-medium) {
+        background-image: linear-gradient(
+            to top right,
+            rgba($color-primary, 0.95),
+            rgba($color-primary, 0.83)
+          ),
+          url("/img/quantitycheck.png");
+        background-size: cover;
+        border-radius: 5px;
+      }
+    }
+
+    &:nth-of-type(4) {
+      @media only screen and (max-width: $bp-medium) {
+        background-image: linear-gradient(
+            to top right,
+            rgba($color-primary, 0.95),
+            rgba($color-primary, 0.83)
+          ),
+          url("/img/educa.png");
+        background-size: cover;
+        border-radius: 5px;
+      }
+    }
+
+    &:nth-of-type(5) {
+      @media only screen and (max-width: $bp-medium) {
+        background-image: linear-gradient(
+            to top right,
+            rgba($color-primary, 0.95),
+            rgba($color-primary, 0.83)
+          ),
+          url("/img/onlineshop.png");
+        background-size: cover;
+        border-radius: 5px;
+      }
+    }
+
+    &__details {
+      width: 125%;
+      z-index: 1;
+      margin-top: -2rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        height: fit-content;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        padding: 4rem 1.6rem;
+      }
+
+      @media only screen and (max-width: $bp-extra-small) {
+        padding: 4rem 1rem;
+      }
+
+      &--title {
+        font-size: 2.4rem;
+        color: $color-primary-light-8;
+        margin-bottom: 1.2rem;
+        text-decoration: none;
+        letter-spacing: 2.4px;
+        font-weight: 400;
+      }
+
+      &--description {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: $color-primary-light-9;
+        line-height: 1.2;
+        filter: brightness(80%);
+        letter-spacing: 1.6px;
+        margin: 0;
+        text-align: right;
+        background-color: $color-primary-light-2;
+        padding: 2.4rem 3.4rem;
+        border-radius: 5px;
+        box-shadow: $shadow;
+
+        @media only screen and (max-width: $bp-medium) {
+          text-align: start;
+        }
+      }
+
+      &--tags {
+        color: $color-primary-light-9;
+        filter: brightness(80%);
+        font-size: 1.2rem;
+
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        gap: 1.2rem;
+      }
+
+      &--links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.6rem;
+
+        @media only screen and (max-width: $bp-medium) {
+          z-index: 2;
+        }
+      }
+    }
+
+    &__img {
+      display: block;
+      position: relative;
+      transition: $transition;
+      width: 110%;
+      height: 90%;
+      box-shadow: $shadow;
+
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+      }
+    }
+
+    &__img::after {
+      content: "";
+      display: inline-block;
+      background-image: linear-gradient(
+          $color-primary-light-2,
+          $color-primary-light-2
+        ),
+        url(../img/quantitycheck.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 5px;
+      transition: $transition;
+      mix-blend-mode: hue;
+    }
+
+    &__img:hover::after {
+      opacity: 0;
+    }
+
+    &__img img {
+      width: inherit;
+      height: inherit;
+      border-radius: 5px;
+    }
+  }
+
+  &__project:nth-of-type(even) {
+    flex-direction: row-reverse;
+
+    & > * {
+      align-items: flex-start;
+    }
+
+    & p:first-of-type {
+      text-align: left;
+    }
+
+    .work__project__img img,
+    .work__project__img::after {
+      position: absolute;
+      right: 0;
+      left: auto;
+    }
+  }
+}
